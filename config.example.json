@@ -1,0 +1,57 @@
+{
+  "_comment": "Copy this to config.json and modify as needed",
+  "_description": "Configuration file for Telegram Scraper",
+
+  "CHANNEL_USERNAME": "kpszsu",
+  "SEARCH_PHRASE": "У ніч на",
+
+  "OPENAI_MODEL": "gpt-4o-mini",
+  "MAX_TOKENS": 8000,
+  "TEMPERATURE": 0,
+
+  "USE_INCREMENTAL": true,
+  "MESSAGE_LIMIT": null,
+
+  "REQUEST_DELAY": 1.0,
+  "MAX_CONCURRENT_REQUESTS": 5,
+  "RETRY_MAX_TRIES": 3,
+  "RETRY_MAX_TIME": 60,
+
+  "OUTPUT_FILE": "ukraine_airforce_updates.csv",
+  "LOG_FILE": "telegram_scraper.log",
+  "LOG_LEVEL": "INFO",
+
+  "SESSION_NAME": "session",
+  "CSV_ENCODING": "utf-8",
+
+  "_examples": {
+    "_comment": "Example configurations for different use cases",
+
+    "unlimited_messages": {
+      "MESSAGE_LIMIT": null,
+      "_note": "Set MESSAGE_LIMIT to null for unlimited collection"
+    },
+
+    "different_models": {
+      "OPENAI_MODEL": "gpt-4o",
+      "_alternatives": ["gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo"]
+    },
+
+    "debug_mode": {
+      "LOG_LEVEL": "DEBUG",
+      "_note": "Use DEBUG for detailed logging"
+    },
+
+    "faster_processing": {
+      "REQUEST_DELAY": 0.5,
+      "MAX_CONCURRENT_REQUESTS": 10,
+      "_warning": "Be careful with rate limits"
+    },
+
+    "different_channel": {
+      "CHANNEL_USERNAME": "some_other_channel",
+      "SEARCH_PHRASE": "breaking news",
+      "OUTPUT_FILE": "other_channel_data.csv"
+    }
+  }
+}
