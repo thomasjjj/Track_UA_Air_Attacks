@@ -1,0 +1,1 @@
+This script tracks the air force updates and sees the daily drone/missile reports
